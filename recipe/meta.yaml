@@ -26,20 +26,21 @@ requirements:
         - ninja
         - vtk 8.*
         - boost-cpp 1.66*
-        - occt 7.2.0
+        - occt 7.2.*
         - netgen
         # - libmed
         - pthread-stubs  # [unix]
         - pthreads-win32  # [win]
+        - python
     run:
         - vtk 8.*
         - boost-cpp 1.66*
-        - occt 7.2.0
+        - occt 7.2.*
         - netgen
         # - libmed
         - pthread-stubs  # [unix]
         - pthreads-win32  # [win]
-        - vc 14  # [win]
+        - python
 
 test:
     requires:
