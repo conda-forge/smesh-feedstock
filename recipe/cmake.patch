@@ -1,5 +1,5 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index b493984..a9b5b0a 100644
+index b493984..9002dfe 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -323,7 +323,7 @@ target_link_libraries(MEFISTO2 SMESHTrace TKernel)
@@ -10,4 +10,13 @@ index b493984..a9b5b0a 100644
 +target_link_libraries(SMESHMisc SMESHTrace TKBRep TKShHealing TKMesh TKGeomAlgo TKTopAlgo TKG2d TKG3d TKGeomBase TKBO)
  if(WIN32)
      set_target_properties(SMESHMisc PROPERTIES COMPILE_FLAGS "-DUTILS_EXPORTS")
+ endif()
+@@ -355,7 +355,7 @@ endif()
+ # SMESH
+ file(GLOB SMESH_SRC src/SMESH/*.cxx)
+ add_library(SMESH ${SMESH_SRC})
+-target_link_libraries(SMESH SMESHControls SMESHMisc SMESHDS DriverDAT DriverSTL DriverUNV DriverGMF TKShHealing TKPrim TKG2d TKCDF TKMeshVS ${Boost_LIBRARIES})
++target_link_libraries(SMESH SMESHControls SMESHMisc SMESHDS DriverDAT DriverSTL DriverUNV DriverGMF TKShHealing TKPrim TKG2d TKCDF ${Boost_LIBRARIES})
+ if(WIN32)
+     set_target_properties(SMESH PROPERTIES COMPILE_FLAGS "-DSMESHimpl_EXPORTS")
  endif()
