@@ -11,8 +11,6 @@ source:
     fn: {{ name }}_{{ version }}.tar.gz
     url: https://github.com/LaughlinResearch/SMESH/archive/{{ commit }}.tar.gz
     sha256: {{ sha256 }}
-    patches:
-        - cmake.patch
 
 build:
     number: 4

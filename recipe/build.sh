@@ -1,6 +1,9 @@
 mkdir -p build
 cd build
 
+if [ `uname` = "Darwin" ]; then
+    sed -i '' 's/Xcode-9.app/Xcode.app' $PREFIX/lib/cmake/opencascade/OpenCASCADEVisualizationTargets.cmake
+fi
 
 if [ `uname` = "Darwin" ]; then
 	BUILD_WITH_NETGEN=OFF
