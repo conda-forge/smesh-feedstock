@@ -16,6 +16,7 @@ cmake -G "Ninja" \
       -D CMAKE_CXX_FLAGS="-std=c++11" \
       -D ENABLE_MED=OFF \
       -D ENABLE_NETGEN:BOOL=$BUILD_WITH_NETGEN \
+      -D MACOSX_RPATH:Bool=ON \
       ..
 
 ninja install
