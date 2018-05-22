@@ -16,7 +16,7 @@ build:
     number: 4
     features:
         - vc14  # [win]
-    skip: true  # [py<35 or win32]
+    skip: true  # [py<=35 or win32]
 
 requirements:
     build:
