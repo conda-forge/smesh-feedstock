@@ -13,7 +13,7 @@ source:
     sha256: {{ sha256 }}
 
 build:
-    number: 5
+    number: 6
     features:
         - vc14  # [win]
     skip: true  # [py<35 or win32]
@@ -33,9 +33,9 @@ requirements:
         - pthreads-win32  # [win]
         - python
     run:
-        - vtk 8.*
-        - boost-cpp 1.66*
-        - occt 7.2.*
+        - {{ pin_compatible("vtk", max_pin="x.x.x") }}
+        - {{ pin_compatible("boost-cpp", max_pin="x.x") }}
+        - {{ pin_compatible("occt", max_pin="x.x") }}
         - netgen
         # - libmed
         - pthread-stubs  # [unix]
