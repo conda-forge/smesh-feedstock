@@ -11,36 +11,36 @@ source:
     fn: {{ name }}_{{ version }}.tar.gz
     url: https://github.com/LaughlinResearch/SMESH/archive/{{ commit }}.tar.gz
     sha256: {{ sha256 }}
+    patches:
+        - occt_version.patch
 
 build:
-    number: 7
-    features:
-        - vc14  # [win]
+    number: 8
     skip: true  # [py<35 or win32]
 
 requirements:
     build:
-        - vc 14  # [win]
-        - toolchain
+        - {{ compiler('cxx') }}
         - cmake
         - ninja
-        - vtk 8.*
-        - boost-cpp 1.66*
-        - occt 7.2.*
+    host:
+        - vtk
+        - boost-cpp
+        - occt
         - netgen
-        # - libmed
         - pthread-stubs  # [unix]
         - pthreads-win32  # [win]
         - python
+        # - libmed
     run:
         - {{ pin_compatible("vtk", max_pin="x.x.x") }}
         - {{ pin_compatible("boost-cpp", max_pin="x.x") }}
         - {{ pin_compatible("occt", max_pin="x.x") }}
         - netgen
-        # - libmed
         - pthread-stubs  # [unix]
         - pthreads-win32  # [win]
         - python
+        # - libmed
 
 test:
     requires:
@@ -49,7 +49,7 @@ test:
     files:
         - CMakeLists.txt
     commands:
-        - cmake -G "Ninja" .  # [unix]
+        - cmake -G "Ninja" .
 
 about:
     home: https://github.com/LaughlinResearch/SMESH
