@@ -1,13 +1,7 @@
-MACOSX_DEPLOYMENT_TARGET:
-- '10.9'
 boost_cpp:
 - 1.66.0
 cxx_compiler:
-- toolchain_cxx
-macos_machine:
-- x86_64-apple-darwin13.4.0
-macos_min_version:
-- '10.9'
+- vs2015
 pin_run_as_build:
   boost-cpp:
     max_pin: x.x.x
@@ -16,3 +10,6 @@ pin_run_as_build:
     max_pin: x.x
 python:
 - '3.6'
+zip_keys:
+- - python
+  - cxx_compiler
