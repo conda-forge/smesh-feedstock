@@ -26,7 +26,7 @@ requirements:
     host:
         - vtk
         - boost-cpp
-        - occt
+        - occt 7.3
         - netgen
         - pthread-stubs  # [unix]
         - pthreads-win32  # [win]
