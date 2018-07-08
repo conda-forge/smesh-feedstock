@@ -15,15 +15,14 @@ source:
         - occt_version.patch
 
 build:
-    number: 8
-    skip: true  # [py<35 or win32]
+    number: 9
 
 requirements:
     build:
         - {{ compiler('cxx') }}
-        - cmake
         - ninja
     host:
+        - cmake
         - vtk
         - boost-cpp
         - occt 7.3
