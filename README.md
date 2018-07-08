@@ -14,8 +14,7 @@ Standalone version of the meshing library from the Salome Platform.
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/smesh-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/smesh-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/smesh-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/smesh-feedstock)
+[![Linux,OSX](https://img.shields.io/circleci/project/github/conda-forge/smesh-feedstock/master.svg?label=Linux,OSX)](https://circleci.com/gh/conda-forge/smesh-feedstock)
 [![Windows](https://img.shields.io/appveyor/ci/conda-forge/smesh-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/smesh-feedstock/branch/master)
 
 Current release info
