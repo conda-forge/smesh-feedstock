@@ -6,7 +6,6 @@ cmake -G "Ninja" \
       -D CMAKE_BUILD_TYPE=Release \
       -D CMAKE_PREFIX_PATH:FILEPATH=$PREFIX \
       -D CMAKE_SYSTEM_PREFIX_PATH:FILEPATH=$PREFIX \
-      -D CMAKE_CXX_FLAGS="-std=c++11" \
       -D ENABLE_MED:BOOL=OFF \
       -D ENABLE_NETGEN:BOOL=ON \
       ..
