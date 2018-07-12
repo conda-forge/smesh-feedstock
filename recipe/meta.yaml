@@ -12,7 +12,7 @@ source:
     url: https://github.com/LaughlinResearch/SMESH/archive/{{ commit }}.tar.gz
     sha256: {{ sha256 }}
     patches:
-        - occt_version.patch
+        - occt_version_c++14.patch
 
 build:
     number: 9
