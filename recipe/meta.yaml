@@ -1,5 +1,5 @@
 {% set name = "smesh" %}
-{% set version = "8.3.0b0" %}
+{% set version = "8.3.0.2" %}
 {% set sha256 = "008e359eb45bd77111570c4ae042d01a462d2e8e06686c3995b4e76aace066a1" %}
 {% set commit = "b0df1918fc6814c093ef888deb8e155396ed359c" %}
 
@@ -15,7 +15,7 @@ source:
         - occt_version_c++14.patch
 
 build:
-    number: 9
+    number: 0
 
 requirements:
     build:
