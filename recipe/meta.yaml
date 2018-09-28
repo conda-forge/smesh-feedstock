@@ -1,7 +1,6 @@
 {% set name = "smesh" %}
-{% set version = "8.3.0b0" %}
-{% set sha256 = "008e359eb45bd77111570c4ae042d01a462d2e8e06686c3995b4e76aace066a1" %}
-{% set commit = "b0df1918fc6814c093ef888deb8e155396ed359c" %}
+{% set version = "8.3.0.2" %}
+{% set sha256 = "1a0c4253455982850e19a8621e3752759abc9290c7369449b3f02890edcc0ef3" %}
 
 package:
     name: {{ name }}
@@ -9,13 +8,11 @@ package:
 
 source:
     fn: {{ name }}_{{ version }}.tar.gz
-    url: https://github.com/LaughlinResearch/SMESH/archive/{{ commit }}.tar.gz
+    url: https://github.com/LaughlinResearch/SMESH/archive/v{{ version }}.tar.gz
     sha256: {{ sha256 }}
-    patches:
-        - occt_version_c++14.patch
 
 build:
-    number: 9
+    number: 0
 
 requirements:
     build:
@@ -25,17 +22,18 @@ requirements:
         - cmake
         - vtk
         - boost-cpp
-        - occt 7.3
+        - occt
         - netgen
         - pthread-stubs  # [unix]
         - pthreads-win32  # [win]
         - python
+        - tbb-devel
         - zlib
         # - libmed
     run:
-        - {{ pin_compatible("vtk", max_pin="x.x.x") }}
-        - {{ pin_compatible("boost-cpp", max_pin="x.x") }}
-        - {{ pin_compatible("occt", max_pin="x.x") }}
+        - vtk
+        - boost-cpp
+        - occt
         - netgen
         - pthread-stubs  # [unix]
         - pthreads-win32  # [win]
