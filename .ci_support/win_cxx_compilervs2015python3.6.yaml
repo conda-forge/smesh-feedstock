@@ -23,7 +23,7 @@ pin_run_as_build:
 python:
 - '3.6'
 vtk:
-- 8.1.1
+- 8.1.2
 zip_keys:
 - - python
   - cxx_compiler

@@ -30,7 +30,6 @@ requirements:
         - pthreads-win32  # [win]
         - python
         - tbb-devel
-        - zlib
         # - libmed
     run:
         - vtk
@@ -39,7 +38,6 @@ requirements:
         - netgen
         - pthread-stubs  # [unix]
         - pthreads-win32  # [win]
-        - zlib
         # - libmed
 
 test:
