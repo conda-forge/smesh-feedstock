@@ -1,6 +1,7 @@
 {% set name = "smesh" %}
 {% set version = "8.3.0.2" %}
 {% set sha256 = "1a0c4253455982850e19a8621e3752759abc9290c7369449b3f02890edcc0ef3" %}
+{% set commit = "eac52539e355ee0aaa5b3c6100274c23ff4492c4" %}
 
 package:
     name: {{ name }}
@@ -8,11 +9,12 @@ package:
 
 source:
     fn: {{ name }}_{{ version }}.tar.gz
-    url: https://github.com/LaughlinResearch/SMESH/archive/v{{ version }}.tar.gz
+    # url: https://github.com/LaughlinResearch/SMESH/archive/v{{ version }}.tar.gz
+    url: https://github.com/LaughlinResearch/SMESH/archive/{{ commit }}.tar.gz
     sha256: {{ sha256 }}
 
 build:
-    number: 1
+    number: 2
     skip: True  # [py < 36]
 
 requirements:
