@@ -18,14 +18,10 @@ pin_run_as_build:
     max_pin: x.x
   vtk:
     max_pin: x.x.x
-  zlib:
-    max_pin: x.x
 python:
 - '3.6'
 vtk:
-- 8.1.2
+- 8.1.1
 zip_keys:
 - - python
   - cxx_compiler
-zlib:
-- '1.2'
