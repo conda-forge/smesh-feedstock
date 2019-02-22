@@ -15,6 +15,7 @@ cmake -G "Ninja" \
       -D CMAKE_CXX_STANDARD=${cpp_std} \
       -D ENABLE_MED:BOOL=OFF \
       -D ENABLE_NETGEN:BOOL=ON \
+      -D CMAKE_POLICY_DEFAULT_CMP0025=NEW \
       ..
 
 ninja install -v
