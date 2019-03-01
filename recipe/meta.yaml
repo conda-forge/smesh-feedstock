@@ -23,8 +23,8 @@ requirements:
         - {{ compiler('c') }}
         - {{ cdt('mesa-libgl-devel') }}  # [linux]
         - ninja
-    host:
         - cmake
+    host:
         - vtk
         - boost-cpp
         - occt
