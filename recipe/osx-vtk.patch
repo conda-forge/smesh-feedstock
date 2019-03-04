@@ -1,5 +1,5 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 21cb116..5398a2f 100644
+index 21cb116..28c1616 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -71,6 +71,125 @@ endif()
@@ -7,7 +7,7 @@ index 21cb116..5398a2f 100644
  include_directories(${VTK_INCLUDE_DIRS})
  
 +# overwrite VTK_LIBRARIES
-+set(VTK_LIBRARY_SUFFIX "-8.2.0")
++set(VTK_LIBRARY_SUFFIX "-8.1.2")
 +set(VTK_LIBRARIES
 +    vtksys${VTK_LIBRARY_SUFFIX}
 +    vtkCommonCore${VTK_LIBRARY_SUFFIX}
