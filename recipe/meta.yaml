@@ -35,7 +35,6 @@ requirements:
         - pthreads-win32  # [win]
         - python
         - tbb-devel
-        - zlib  # [osx]
         # - libmed
     run:
         - vtk
