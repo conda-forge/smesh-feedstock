@@ -3,7 +3,6 @@ cd build
 
 if [ `uname` = "Darwin" ]; then
       cpp_std=""
-      sed -i '' 's/Xcode-9.app/Xcode.app/g' $PREFIX/lib/cmake/opencascade/OpenCASCADEVisualizationTargets.cmake
 else
       cpp_std=17
 fi
