@@ -3,6 +3,7 @@ cd build
 
 if [ `uname` = "Darwin" ]; then
       cpp_std=""
+      sed -i '' 's/Xcode-9.app/Xcode.app/g' $PREFIX/lib/cmake/opencascade/OpenCASCADEVisualizationTargets.cmake
 else
       cpp_std=17
 fi
@@ -15,7 +16,6 @@ cmake -G "Ninja" \
       -D CMAKE_CXX_STANDARD=${cpp_std} \
       -D ENABLE_MED:BOOL=OFF \
       -D ENABLE_NETGEN:BOOL=ON \
-      -D CMAKE_POLICY_DEFAULT_CMP0025=NEW \
       ..
 
 ninja install -v
