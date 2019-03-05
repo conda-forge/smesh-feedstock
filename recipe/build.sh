@@ -2,7 +2,7 @@ mkdir -p build
 cd build
 
 if [ `uname` = "Darwin" ]; then
-      cpp_std=""
+      cpp_std=14
 else
       cpp_std=17
 fi
