@@ -16,7 +16,7 @@ source:
         - osx-vtk.patch  # [osx]
 
 build:
-    number: 3
+    number: 4
     skip: True  # [py < 36]
 
 requirements:
@@ -24,6 +24,7 @@ requirements:
         - {{ compiler('cxx') }}
         - {{ compiler('c') }}
         - {{ cdt('mesa-libgl-devel') }}  # [linux]
+        - {{ cdt('libxi-devel') }}  # [linux]
         - ninja
         - cmake
     host:
