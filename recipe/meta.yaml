@@ -13,7 +13,7 @@ source:
     url: https://github.com/LaughlinResearch/SMESH/archive/{{ commit }}.tar.gz
     sha256: {{ sha256 }}
     patches:
-        - cmake.patch
+        # - cmake.patch
         # - osx-vtk.patch  # [osx]
 
 build:
