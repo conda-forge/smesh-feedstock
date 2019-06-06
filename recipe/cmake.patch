@@ -1,0 +1,13 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 21cb116..fc23daf 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -81,7 +81,7 @@ if(NOT DEFINED Boost_INCLUDE_DIR)
+ endif()
+ 
+ if(NOT EXISTS ${Boost_INCLUDE_DIR})
+-    message(FATAL_ERROR "Failed to find Boost include directory.")
++    message(STATUS "Failed to find Boost include directory.")
+ endif()
+ 
+ message(STATUS "Boost include directory: ${Boost_INCLUDE_DIR}")
