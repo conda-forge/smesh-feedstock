@@ -1,11 +1,11 @@
 mkdir -p build
 cd build
 
-# if [ `uname` = "Darwin" ]; then
-#       cpp_std=14
-# else
-#       cpp_std=17
-# fi
+if [ `uname` = "Darwin" ]; then
+      cpp_std=14
+else
+      cpp_std=17
+fi
 
 cmake -G "Ninja" \
       -D CMAKE_BUILD_TYPE:STRING="Release" \
@@ -16,4 +16,4 @@ cmake -G "Ninja" \
       -D ENABLE_NETGEN:BOOL=ON \
       ..
 
-ninja install -v
+ninja install
