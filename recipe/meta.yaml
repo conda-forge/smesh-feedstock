@@ -14,9 +14,10 @@ source:
     sha256: {{ sha256 }}
     patches:
         - osx-vtk.patch  # [osx]
+        - vtk.patch  # [linux]
 
 build:
-    number: 4
+    number: 5
     skip: True  # [py < 36]
 
 requirements:
