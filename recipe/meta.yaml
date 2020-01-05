@@ -1,7 +1,6 @@
 {% set name = "smesh" %}
-{% set version = "8.3.0.2" %}
-{% set sha256 = "ed8b64c84ab87feeb0b1fa61b616dde7c0138351447b06f977c2e0151f802552" %}
-{% set commit = "8567fd0734d138ce8529c080ae85474e7a9c3c89" %}
+{% set version = "8.3.0.3" %}
+{% set sha256 = "bd5bddd509e5120bdd56178c37471984062e8abd36465389d64fb6e1b811a1d4" %}
 
 package:
     name: {{ name }}
@@ -9,14 +8,13 @@ package:
 
 source:
     fn: {{ name }}_{{ version }}.tar.gz
-    # url: https://github.com/LaughlinResearch/SMESH/archive/v{{ version }}.tar.gz
-    url: https://github.com/LaughlinResearch/SMESH/archive/{{ commit }}.tar.gz
+    url: https://github.com/LaughlinResearch/SMESH/archive/v{{ version }}.tar.gz
     sha256: {{ sha256 }}
     patches:
         - osx-vtk.patch  # [osx]
 
 build:
-    number: 6
+    number: 7
     skip: True  # [py < 36]
 
 requirements:
@@ -45,6 +43,7 @@ requirements:
         - netgen
         - pthread-stubs  # [unix]
         - pthreads-win32  # [win]
+        - python
         - zlib
         # - libmed
 
