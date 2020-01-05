@@ -1,5 +1,5 @@
 {% set name = "smesh" %}
-{% set version = "8.3.0.2" %}
+{% set version = "8.3.0.3" %}
 {% set sha256 = "ed8b64c84ab87feeb0b1fa61b616dde7c0138351447b06f977c2e0151f802552" %}
 {% set commit = "8567fd0734d138ce8529c080ae85474e7a9c3c89" %}
 
@@ -16,7 +16,7 @@ source:
         - osx-vtk.patch  # [osx]
 
 build:
-    number: 6
+    number: 0
     skip: True  # [py < 36]
 
 requirements:
