@@ -45,6 +45,7 @@ requirements:
         - netgen
         - pthread-stubs  # [unix]
         - pthreads-win32  # [win]
+        - python
         - zlib
         # - libmed
 
