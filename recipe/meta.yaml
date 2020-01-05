@@ -1,7 +1,6 @@
 {% set name = "smesh" %}
-{% set version = "8.3.0.2" %}
-{% set sha256 = "1bbf257b60226ae477a739948e17497a2a911655aa1c870eb027e7f3749cf4f2" %}
-{% set commit = "aac403874ba69d139bb82dbdf27575f13890ac6c" %}
+{% set version = "8.3.0.3" %}
+{% set sha256 = "bd5bddd509e5120bdd56178c37471984062e8abd36465389d64fb6e1b811a1d4" %}
 
 package:
     name: {{ name }}
@@ -9,8 +8,7 @@ package:
 
 source:
     fn: {{ name }}_{{ version }}.tar.gz
-    # url: https://github.com/LaughlinResearch/SMESH/archive/v{{ version }}.tar.gz
-    url: https://github.com/LaughlinResearch/SMESH/archive/{{ commit }}.tar.gz
+    url: https://github.com/LaughlinResearch/SMESH/archive/v{{ version }}.tar.gz
     sha256: {{ sha256 }}
     patches:
         - osx-vtk.patch  # [osx]
