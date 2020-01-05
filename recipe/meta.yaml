@@ -1,7 +1,7 @@
 {% set name = "smesh" %}
 {% set version = "8.3.0.2" %}
-{% set sha256 = "ed8b64c84ab87feeb0b1fa61b616dde7c0138351447b06f977c2e0151f802552" %}
-{% set commit = "8567fd0734d138ce8529c080ae85474e7a9c3c89" %}
+{% set sha256 = "1bbf257b60226ae477a739948e17497a2a911655aa1c870eb027e7f3749cf4f2" %}
+{% set commit = "aac403874ba69d139bb82dbdf27575f13890ac6c" %}
 
 package:
     name: {{ name }}
