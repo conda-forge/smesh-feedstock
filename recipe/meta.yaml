@@ -14,7 +14,7 @@ source:
         - osx-vtk.patch  # [osx]
 
 build:
-    number: 8
+    number: 9
     skip: True  # [py < 36]
 
 requirements:
@@ -40,6 +40,7 @@ requirements:
         - vtk
         - boost-cpp
         - occt
+        - {{ pin_compatible('netgen', max_pin='x.x.x') }}
         - netgen
         - pthread-stubs  # [unix]
         - pthreads-win32  # [win]
@@ -58,7 +59,7 @@ test:
 
 about:
     home: https://github.com/LaughlinResearch/SMESH
-    license: LGPL2.1
+    license: LGPL-2.1
     license_family: LGPL
     license_file:  LICENSE.txt
     summary: A complete MESH framework based on the OCCT library.
