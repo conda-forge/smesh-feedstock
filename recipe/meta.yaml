@@ -12,6 +12,7 @@ source:
     sha256: {{ sha256 }}
     patches:
         - osx-vtk.patch  # [osx]
+        - linker.patch  # [win]
 
 build:
     number: 9
@@ -34,6 +35,7 @@ requirements:
         - python
         - tbb-devel
         - zlib
+        - pthreads-win32  # [win]
         # - libmed
     run:
         - vtk
