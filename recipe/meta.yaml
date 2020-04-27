@@ -15,7 +15,7 @@ source:
         - linker.patch  # [win]
 
 build:
-    number: 9
+    number: 10
     skip: True  # [py < 36]
 
 requirements:
@@ -44,6 +44,7 @@ requirements:
         - {{ pin_compatible('netgen', max_pin='x.x.x') }}
         - python
         - zlib
+        - pthreads-win32  # [win]
         # - libmed
 
 test:
