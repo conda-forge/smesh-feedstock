@@ -40,7 +40,6 @@ requirements:
         - boost-cpp
         - occt
         - {{ pin_compatible('netgen', max_pin='x.x.x') }}
-        - netgen
         - python
         - zlib
         # - libmed
