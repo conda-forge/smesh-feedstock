@@ -12,9 +12,10 @@ source:
     sha256: {{ sha256 }}
     patches:
         - osx-vtk.patch  # [osx]
+        - linker.patch  # [win]
 
 build:
-    number: 8
+    number: 9
     skip: True  # [py < 36]
 
 requirements:
@@ -22,7 +23,8 @@ requirements:
         - {{ compiler('cxx') }}
         - {{ compiler('c') }}
         - {{ cdt('mesa-libgl-devel') }}  # [linux]
-        - {{ cdt('libxi-devel') }}  # [linux]
+        - {{ cdt('libxi-devel') }}       # [linux]
+        - {{ cdt('libxext-devel') }}     # [linux]
         - ninja
         - cmake
     host:
@@ -30,19 +32,16 @@ requirements:
         - boost-cpp
         - occt
         - netgen
-        - pthread-stubs  # [unix]
-        - pthreads-win32  # [win]
         - python
         - tbb-devel
         - zlib
+        - pthreads-win32  # [win]
         # - libmed
     run:
         - vtk
         - boost-cpp
         - occt
-        - netgen
-        - pthread-stubs  # [unix]
-        - pthreads-win32  # [win]
+        - {{ pin_compatible('netgen', max_pin='x.x.x') }}
         - python
         - zlib
         # - libmed
@@ -58,7 +57,7 @@ test:
 
 about:
     home: https://github.com/LaughlinResearch/SMESH
-    license: LGPL2.1
+    license: LGPL-2.1
     license_family: LGPL
     license_file:  LICENSE.txt
     summary: A complete MESH framework based on the OCCT library.
