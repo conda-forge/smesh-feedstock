@@ -31,8 +31,6 @@ requirements:
         - boost-cpp
         - occt
         - netgen
-        - pthread-stubs  # [unix]
-        - pthreads-win32  # [win]
         - python
         - tbb-devel
         - zlib
@@ -43,8 +41,6 @@ requirements:
         - occt
         - {{ pin_compatible('netgen', max_pin='x.x.x') }}
         - netgen
-        - pthread-stubs  # [unix]
-        - pthreads-win32  # [win]
         - python
         - zlib
         # - libmed
