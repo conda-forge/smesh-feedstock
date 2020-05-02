@@ -7,15 +7,14 @@ package:
     version: {{ version }}
 
 source:
-    fn: {{ name }}_{{ version }}.tar.gz
-    url: https://github.com/LaughlinResearch/SMESH/archive/v{{ version }}.tar.gz
-    sha256: {{ sha256 }}
-    patches:
-        - osx-vtk.patch  # [osx]
-        - linker.patch  # [win]
+    # fn: {{ name }}_{{ version }}.tar.gz
+    # url: https://github.com/LaughlinResearch/SMESH/archive/v{{ version }}.tar.gz
+    # sha256: {{ sha256 }}
+    git_url: https://github.com/looooo/SMESH
+    git_tag: netgen6.2.2004
 
 build:
-    number: 10
+    number: 11
     skip: True  # [py < 36]
 
 requirements:
