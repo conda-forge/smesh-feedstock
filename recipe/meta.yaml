@@ -1,6 +1,6 @@
 {% set name = "smesh" %}
 {% set version = "8.3.0.3.test" %}
-{% set sha256 = "35e63d3c8321b6c5b19551d740e11f6073e0758c311e6d8a45e54b5f42cd324c" %}
+{% set sha256 = "f084d5934d813f20a177867003f98de3053ca8fc5c10bf7a555a4bfdfd220fba" %}
 
 package:
     name: {{ name }}
