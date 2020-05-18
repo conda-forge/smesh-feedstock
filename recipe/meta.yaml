@@ -1,6 +1,8 @@
 {% set name = "smesh" %}
-{% set version = "8.3.0.3.test" %}
-{% set sha256 = "b499848fd676bf728fd36b58885d1880306bfc078eb95c13f78fad6a5b8f4aac" %}
+{% set version = "8.3.0.3.test.debug" %}
+{% set sha256 = "1a4c6660d155814c72970c4e73fd54bad7bba2bd369bb7f2f4c50a972946ddcc" %}
+{% set build_number = 11 %}
+{% set build_number = build_number + 500 %}  # [FEATURE_DEBUG]
 
 package:
     name: {{ name }}
@@ -14,7 +16,7 @@ source:
     # git_tag: "netgen6.2.2004"
 
 build:
-    number: 11
+    number: {{ build_number }}
     skip: True  # [py < 36]
 
 requirements:

@@ -1,6 +1,13 @@
 mkdir -p build
 cd build
 
+if [[ ${FEATURE_DEBUG} = 1 ]]; then
+      BUILD_TYPE="Debug"
+else
+      BUILD_TYPE="Release"
+fi
+
+
 if [ `uname` = "Darwin" ]; then
       cpp_std=14
 else
@@ -10,7 +17,7 @@ else
 fi
 
 cmake -G "Ninja" \
-      -D CMAKE_BUILD_TYPE:STRING="Release" \
+      -D CMAKE_BUILD_TYPE:STRING=${BUILD_TYPE} \
       -D CMAKE_INSTALL_PREFIX:FILEPATH=$PREFIX \
       -D CMAKE_PREFIX_PATH:FILEPATH=$PREFIX \
       -D Boost_NO_BOOST_CMAKE:BOOL=ON \

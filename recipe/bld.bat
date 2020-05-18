@@ -1,8 +1,14 @@
 mkdir build
 cd build
 
+if "%FEATURE_DEBUG%"=="1" (
+      set BUILD_TYPE="Debug"
+      echo "#! building debug package !#") else (
+      set BUILD_TYPE="Release")
+
+
 cmake -G "Ninja" ^
-    -D CMAKE_BUILD_TYPE=Release ^
+    -D CMAKE_BUILD_TYPE:STRING=%BUILD_TYPE% ^
     -D CMAKE_INSTALL_PREFIX:FILEPATH="%LIBRARY_PREFIX%" ^
     -D CMAKE_PREFIX_PATH:FILEPATH="%LIBRARY_PREFIX%" ^
     -D CMAKE_SYSTEM_PREFIX_PATH:FILEPATH="%LIBRARY_PREFIX%" ^
