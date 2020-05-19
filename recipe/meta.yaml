@@ -1,7 +1,7 @@
 {% set name = "smesh" %}
-{% set version = "8.3.0.3.test.debug" %}
-{% set sha256 = "1a4c6660d155814c72970c4e73fd54bad7bba2bd369bb7f2f4c50a972946ddcc" %}
-{% set build_number = 11 %}
+{% set version = "8.3.0.3.test" %}
+{% set sha256 = "265b7ee9b59391d7c22dfa9e2affe3a691ed7ed75c9ce3a04d309b36b4657597" %}
+{% set build_number = 14 %}
 {% set build_number = build_number + 500 %}  # [FEATURE_DEBUG]
 
 package:
