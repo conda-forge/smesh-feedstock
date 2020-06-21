@@ -1,69 +1,69 @@
 {% set name = "smesh" %}
-{% set version = "8.3.0.3" %}
-{% set sha256 = "bd5bddd509e5120bdd56178c37471984062e8abd36465389d64fb6e1b811a1d4" %}
+{% set version = "8.3.0.4" %}
+{% set sha256 = "f21f7175fa5bbb8b7708c770814da7311d1e04755c4d2774e816e382727d55e6" %}
 
 package:
-    name: {{ name }}
-    version: {{ version }}
+  name: {{ name }}
+  version: {{ version }}
 
 source:
-    fn: {{ name }}_{{ version }}.tar.gz
-    url: https://github.com/LaughlinResearch/SMESH/archive/v{{ version }}.tar.gz
-    sha256: {{ sha256 }}
-    patches:
-        - osx-vtk.patch  # [osx]
-        - linker.patch  # [win]
+  fn: {{ name }}_{{ version }}.tar.gz
+  url: https://github.com/LaughlinResearch/SMESH/archive/v{{ version }}.tar.gz
+  sha256: {{ sha256 }}
+  patches:
+    - osx-vtk.patch      # [osx]
+    - linker.patch      # [win]
 
 build:
-    number: 10
-    skip: True  # [py < 36]
+  number: 0
+  skip: true  # [py < 36]
 
 requirements:
-    build:
-        - {{ compiler('cxx') }}
-        - {{ compiler('c') }}
-        - {{ cdt('mesa-libgl-devel') }}  # [linux]
-        - {{ cdt('libxi-devel') }}       # [linux]
-        - {{ cdt('libxext-devel') }}     # [linux]
-        - ninja
-        - cmake
-    host:
-        - vtk
-        - boost-cpp
-        - occt
-        - netgen
-        - python
-        - tbb-devel
-        - zlib
-        - pthreads-win32  # [win]
+  build:
+    - {{ compiler('cxx') }}
+    - {{ compiler('c') }}
+    - {{ cdt('mesa-libgl-devel') }}      # [linux]
+    - {{ cdt('libxi-devel') }}           # [linux]
+    - {{ cdt('libxext-devel') }}         # [linux]
+    - ninja
+    - cmake
+  host:
+    - vtk
+    - boost-cpp
+    - occt
+    - netgen
+    - python
+    - tbb-devel
+    - zlib
+    - pthreads-win32      # [win]
         # - libmed
-    run:
-        - vtk
-        - boost-cpp
-        - occt
-        - {{ pin_compatible('netgen', max_pin='x.x.x') }}
-        - python
-        - zlib
-        - pthreads-win32  # [win]
+  run:
+    - vtk
+    - boost-cpp
+    - occt
+    - {{ pin_compatible('netgen', max_pin='x.x.x') }}
+    - python
+    - zlib
+    - pthreads-win32      # [win]
         # - libmed
 
 test:
-    requires:
-        - cmake
-        - ninja
-    files:
-        - CMakeLists.txt
-    commands:
-        - cmake -G "Ninja" .
+  requires:
+    - cmake
+    - ninja
+  files:
+    - CMakeLists.txt
+  commands:
+    - cmake -G "Ninja" .
 
 about:
-    home: https://github.com/LaughlinResearch/SMESH
-    license: LGPL-2.1
-    license_family: LGPL
-    license_file:  LICENSE.txt
-    summary: A complete MESH framework based on the OCCT library.
-    description: Standalone version of the meshing library from the Salome Platform.
+  home: https://github.com/LaughlinResearch/SMESH
+  license: LGPL-2.1
+  license_family: LGPL
+  license_file: LICENSE.txt
+  summary: A complete MESH framework based on the OCCT library.
+  description: Standalone version of the meshing library from the Salome Platform.
 
 extra:
-    recipe-maintainers:
-        - looooo
+  recipe-maintainers:
+    - looooo
