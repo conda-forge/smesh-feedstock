@@ -5,7 +5,7 @@ Home: https://github.com/LaughlinResearch/SMESH
 
 Package license: LGPL-2.1
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: A complete MESH framework based on the OCCT library.
 
