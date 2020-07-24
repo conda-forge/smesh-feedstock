@@ -1,6 +1,6 @@
 {% set name = "smesh" %}
-{% set version = "8.3.0.3" %}
-{% set sha256 = "bd5bddd509e5120bdd56178c37471984062e8abd36465389d64fb6e1b811a1d4" %}
+{% set version = "8.3.0.4" %}
+{% set sha256 = "f21f7175fa5bbb8b7708c770814da7311d1e04755c4d2774e816e382727d55e6" %}
 
 package:
     name: {{ name }}
@@ -11,11 +11,11 @@ source:
     url: https://github.com/LaughlinResearch/SMESH/archive/v{{ version }}.tar.gz
     sha256: {{ sha256 }}
     patches:
+        - netgen6.2.2004.patch
         - osx-vtk.patch  # [osx]
-        - linker.patch  # [win]
 
 build:
-    number: 10
+    number: 0
     skip: True  # [py < 36]
 
 requirements:
