@@ -15,7 +15,7 @@ source:
         - linker.patch  # [win]
 
 build:
-    number: 10
+    number: 11
     skip: True  # [py < 36]
 
 requirements:
