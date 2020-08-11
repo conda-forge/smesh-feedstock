@@ -10,9 +10,6 @@ source:
     fn: {{ name }}_{{ version }}.tar.gz
     url: https://github.com/LaughlinResearch/SMESH/archive/v{{ version }}.tar.gz
     sha256: {{ sha256 }}
-    patches:
-        - osx-vtk.patch  # [osx]
-        - linker.patch  # [win]
 
 build:
     number: 11
