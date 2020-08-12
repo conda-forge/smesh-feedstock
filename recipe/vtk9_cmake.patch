@@ -1,21 +1,34 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 3e217c2..d5b3fab 100644
+index 3e217c2..532932a 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -54,22 +54,15 @@ link_directories(${OpenCASCADE_LIBRARY_DIR})
+@@ -54,22 +54,27 @@ link_directories(${OpenCASCADE_LIBRARY_DIR})
  # --------------------------------------------------------------------------- #
  # VTK
  # --------------------------------------------------------------------------- #
 -if(NOT DEFINED VTK_INCLUDE_DIRS OR NOT DEFINED VTK_LIBRARIES)
 +if(NOT DEFINED VTK_LIBRARIES)
++    set (VTK_COMPONENTS
++        CommonCore
++        CommonDataModel
++        FiltersVerdict
++        IOXML
++        FiltersCore
++        FiltersGeneral
++        IOLegacy
++        FiltersExtraction
++        FiltersSources
++        FiltersGeometry
++    )
      message(STATUS "Searching for VTK...")
-     find_package(VTK REQUIRED)
- endif()
- 
--if(NOT DEFINED VTK_INCLUDE_DIRS)
--    message(FATAL_ERROR "Failed to define VTK include directories.")
+-    find_package(VTK REQUIRED)
 -endif()
 -
+-if(NOT DEFINED VTK_INCLUDE_DIRS)
+-    message(FATAL_ERROR "Failed to define VTK include directories.")
++    find_package(VTK COMPONENTS ${VTK_COMPONENTS} REQUIRED)
+ endif()
+ 
  if(NOT DEFINED VTK_LIBRARIES)
      message(FATAL_ERROR "Failed to define VTK libraries.")
  endif()
