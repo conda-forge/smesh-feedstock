@@ -3,6 +3,13 @@ cd build
 
 if [ `uname` = "Darwin" ]; then
       cpp_std=14
+else
+      cpp_std=17
+      sed -i 's#/home/conda/feedstock_root/build_artifacts/vtk_.*_build_env/x86_64-conda_cos6-linux-gnu/sysroot/usr/include##g' ${PREFIX}/lib/cmake/vtk-9.0/VTK-targets-release.cmake
+      sed -i 's#/home/conda/feedstock_root/build_artifacts/vtk_.*_build_env/x86_64-conda_cos6-linux-gnu/sysroot/usr/lib.*;##g' ${PREFIX}/lib/cmake/vtk-9.0/VTK-targets-release.cmake
+      sed -i 's#/home/conda/feedstock_root/build_artifacts/vtk_.*_build_env/x86_64-conda_cos6-linux-gnu/sysroot/usr/lib.*;##g' ${PREFIX}/lib/cmake/vtk-9.0/VTK-targets.cmake
+      sed -i '381d' ${PREFIX}/lib/cmake/vtk-9.0/VTK-targets.cmake
+      sed -i '383d' ${PREFIX}/lib/cmake/vtk-9.0/VTK-targets.cmake
 fi
 
 cmake -G "Ninja" \

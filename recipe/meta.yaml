@@ -12,6 +12,7 @@ source:
     sha256: {{ sha256 }}
     patches:
         - netgen6.2.2004.patch
+        - vtk9_cmake.patch
         # - osx-vtk.patch  # [osx]
 
 build:
