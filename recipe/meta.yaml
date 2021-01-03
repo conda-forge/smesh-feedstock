@@ -28,6 +28,7 @@ requirements:
         - ninja
         - cmake
         - git
+        - python-patch
     host:
         - vtk
         - boost-cpp
