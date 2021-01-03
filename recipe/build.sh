@@ -12,6 +12,7 @@ cmake -G "Ninja" \
       -D Boost_NO_BOOST_CMAKE:BOOL=ON \
       -D ENABLE_MED:BOOL=OFF \
       -D ENABLE_NETGEN:BOOL=ON \
+      -D CMAKE_CXX_STANDARD=14 \
       ..
 
 ninja install
