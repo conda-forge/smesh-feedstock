@@ -1,5 +1,5 @@
 {% set name = "smesh" %}
-{% set version = "8.3.0.3" %}
+{% set version = "9.6.0_alpha" %}
 {% set sha256 = "bd5bddd509e5120bdd56178c37471984062e8abd36465389d64fb6e1b811a1d4" %}
 
 package:
@@ -7,15 +7,15 @@ package:
     version: {{ version }}
 
 source:
-    fn: {{ name }}_{{ version }}.tar.gz
-    url: https://github.com/LaughlinResearch/SMESH/archive/v{{ version }}.tar.gz
-    sha256: {{ sha256 }}
-    patches:
-        - osx-vtk.patch  # [osx]
-        - linker.patch  # [win]
+    # fn: {{ name }}_{{ version }}.tar.gz
+    # url: https://github.com/LaughlinResearch/SMESH/archive/v{{ version }}.tar.gz
+    # sha256: {{ sha256 }}
+    # patches:
+    #     - osx-vtk.patch  # [osx]
+    #     - linker.patch  # [win]
 
 build:
-    number: 10
+    number: 0
     skip: True  # [py < 36]
 
 requirements:
@@ -27,6 +27,7 @@ requirements:
         - {{ cdt('libxext-devel') }}     # [linux]
         - ninja
         - cmake
+        - git
     host:
         - vtk
         - boost-cpp
