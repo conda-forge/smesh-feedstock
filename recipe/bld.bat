@@ -1,3 +1,7 @@
+git clone --recurse-submodules https://github.com/trelau/SMESH.git
+cd SMESH
+python prepare.py
+
 mkdir build
 cd build
 

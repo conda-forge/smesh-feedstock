@@ -32,8 +32,6 @@ requirements:
         - vtk
         - boost-cpp
         - occt
-        - netgen
-        - python
         - tbb-devel
         - zlib
         - pthreads-win32  # [win]
@@ -42,8 +40,6 @@ requirements:
         - vtk
         - boost-cpp
         - occt
-        - {{ pin_compatible('netgen', max_pin='x.x.x') }}
-        - python
         - zlib
         - pthreads-win32  # [win]
         # - libmed
