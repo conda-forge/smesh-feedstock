@@ -16,7 +16,6 @@ source:
 
 build:
     number: 0
-    skip: True  # [py < 36]
 
 requirements:
     build:
@@ -29,7 +28,7 @@ requirements:
         - cmake
         - git
         - python-patch
-        - python >= 3.8
+        - python >=3.8
     host:
         - vtk
         - boost-cpp
