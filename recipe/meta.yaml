@@ -6,7 +6,7 @@ package:
     name: {{ name }}
     version: {{ version }}
 
-source:
+# source:
     # fn: {{ name }}_{{ version }}.tar.gz
     # url: https://github.com/LaughlinResearch/SMESH/archive/v{{ version }}.tar.gz
     # sha256: {{ sha256 }}
@@ -15,53 +15,61 @@ source:
     #     - linker.patch  # [win]
 
 build:
-    number: 0
+  number: 0
 
 requirements:
-    build:
-        - {{ compiler('cxx') }}
-        - {{ compiler('c') }}
-        - {{ cdt('mesa-libgl-devel') }}  # [linux]
-        - {{ cdt('libxi-devel') }}       # [linux]
-        - {{ cdt('libxext-devel') }}     # [linux]
-        - ninja
-        - cmake
-        - git
-        - python-patch
-        - python >=3.8
-    host:
-        - vtk
-        - boost-cpp
-        - occt
-        - tbb-devel
-        - zlib
-        - pthreads-win32  # [win]
-        # - libmed
-    run:
-        - vtk
-        - boost-cpp
-        - occt
-        - zlib
-        - pthreads-win32  # [win]
-        # - libmed
+  build:
+    - {{ compiler('cxx') }}
+    - {{ compiler('c') }}
+    - {{ cdt('mesa-libgl-devel') }}  # [linux]
+    - {{ cdt('libxi-devel') }}       # [linux]
+    - {{ cdt('libxext-devel') }}     # [linux]
+    - ninja
+    - cmake
+    - git
+    - python-patch
+    - python >=3.8
+  host:
+    - vtk
+    - boost-cpp
+    - occt
+    - tbb-devel
+    - zlib
+    - pthreads-win32  # [win]
+    # - libmed
+  run:
+    - vtk
+    - boost-cpp
+    - occt
+    - zlib
+    - pthreads-win32  # [win]
+    # - libmed
 
 test:
-    requires:
-        - cmake
-        - ninja
-    files:
-        - CMakeLists.txt
-    commands:
-        - cmake -G "Ninja" .
+  source_files:
+    - SMESH/test
+  requires:
+    - {{ compiler('cxx') }}
+    - {{ compiler('c') }}
+    - {{ cdt('mesa-libgl-devel') }}   # [linux]
+    - {{ cdt('libxi-devel') }}        # [linux]
+    - {{ cdt('mesa-libegl-devel') }}  # [linux]
+    - {{ cdt('mesa-dri-drivers') }}   # [linux]
+    - {{ cdt('libselinux') }}         # [linux]
+    - {{ cdt('libxdamage') }}         # [linux]
+    - {{ cdt('libxfixes') }}          # [linux]
+    - {{ cdt('libxxf86vm') }}         # [linux]
+    - ninja
+    - catch2
 
 about:
-    home: https://github.com/LaughlinResearch/SMESH
-    license: LGPL-2.1-or-later
-    license_family: LGPL
-    license_file:  SMESH/LICENSE.txt
-    summary: A complete MESH framework based on the OCCT library.
-    description: Standalone version of the meshing library from the Salome Platform.
+  home: https://github.com/LaughlinResearch/SMESH
+  license: LGPL-2.1-or-later
+  license_family: LGPL
+  license_file:  SMESH/LICENSE.txt
+  summary: A complete MESH framework based on the OCCT library.
+  description: Standalone version of the meshing library from the Salome Platform.
 
 extra:
-    recipe-maintainers:
-        - looooo
+  recipe-maintainers:
+    - looooo
