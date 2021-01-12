@@ -13,4 +13,4 @@ ninja install
 
 cd ..
 cd tests
-./test_Netgen
+./test_SMESH
