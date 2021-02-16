@@ -5,7 +5,7 @@ c_compiler:
 channel_sources:
 - conda-forge,defaults
 channel_targets:
-- conda-forge smesh_rc
+- conda-forge main
 cxx_compiler:
 - vs2017
 occt:
@@ -22,6 +22,6 @@ pin_run_as_build:
 target_platform:
 - win-64
 vtk:
-- 9.0.1
+- 8.2.0
 zlib:
 - '1.2'
