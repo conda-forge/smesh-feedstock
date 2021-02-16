@@ -30,7 +30,7 @@ pin_run_as_build:
 target_platform:
 - osx-64
 vtk:
-- 8.2.0
+- 9.0.1
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
