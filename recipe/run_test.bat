@@ -16,4 +16,6 @@ if errorlevel 1 exit 1
 
 cd ..
 cd tests
-test_SMESH.exe
+test_Catch.exe
+test_StdMeshers.exe
+test_NETGENPlugin.exe 
