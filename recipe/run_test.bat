@@ -18,4 +18,5 @@ cd ..
 cd tests
 test_Catch.exe
 test_StdMeshers.exe
-test_NETGENPlugin.exe 
+test_NETGENPlugin.exe
+test_MEFISTO2.exe

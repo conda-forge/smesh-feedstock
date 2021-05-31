@@ -27,4 +27,5 @@ then
 else
     ./test_StdMeshers
     ./test_NETGENPlugin
+    ./test_MEFISTO2
 fi 
