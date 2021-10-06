@@ -21,11 +21,6 @@ cd ..
 cd tests
 
 ./test_Catch
-if [[ ${HOST} =~ .*apple.* ]]
-then
-    echo "Skipping SMESH tests on OSX until they are fixed..."
-else
-    ./test_StdMeshers
-    ./test_NETGENPlugin
-    ./test_MEFISTO2
-fi 
+./test_StdMeshers
+./test_NETGENPlugin
+./test_MEFISTO2
