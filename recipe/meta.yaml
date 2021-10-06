@@ -28,7 +28,7 @@ requirements:
     - cmake
     - git
     - python-patch
-    - python >=3.8
+    - python =3.9
   host:
     - vtk
     - boost-cpp
