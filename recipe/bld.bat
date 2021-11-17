@@ -1,6 +1,10 @@
 git clone --recurse-submodules https://github.com/trelau/SMESH.git
 cd SMESH
 git checkout v9.7.0.1
+# Get a newer version of Netgen that supports occt 7.6
+cd external/Netgen
+git checkout v6.2.2105
+cd ../..
 python prepare.py
 
 mkdir build
