@@ -6,12 +6,12 @@ package:
   name: {{ name }}
   version: {{ version }}
 
-source:
-  fn: {{ name }}_{{ version }}.tar.gz
-  url: https://github.com/trelau/SMESH/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: {{ sha256 }}
-  patches:
-    - geom.patch
+# source:
+#   fn: {{ name }}_{{ version }}.tar.gz
+#   url: https://github.com/trelau/SMESH/archive/refs/tags/v{{ version }}.tar.gz
+#   sha256: {{ sha256 }}
+#   patches:
+#     - geom.patch
 
 build:
   number: 0

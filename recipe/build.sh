@@ -1,3 +1,6 @@
+git clone --recurse-submodules https://github.com/basnijholt/SMESH.git
+cd SMESH
+git checkout occt-7.6
 python prepare.py
 
 mkdir build
