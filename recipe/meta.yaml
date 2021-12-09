@@ -1,18 +1,17 @@
 {% set name = "smesh" %}
 {% set version = "9.7.0.1" %}
-{% set sha256 = "bd5bddd509e5120bdd56178c37471984062e8abd36465389d64fb6e1b811a1d4" %}
+{% set sha256 = "c40137a3d84d58b6fab1e032ccb6c2b063769f9f36572307e2244fd7e18c1240" %}
 
 package:
-    name: {{ name }}
-    version: {{ version }}
+  name: {{ name }}
+  version: {{ version }}
 
-# source:
-    # fn: {{ name }}_{{ version }}.tar.gz
-    # url: https://github.com/LaughlinResearch/SMESH/archive/v{{ version }}.tar.gz
-    # sha256: {{ sha256 }}
-    # patches:
-    #     - osx-vtk.patch  # [osx]
-    #     - linker.patch  # [win]
+source:
+  fn: {{ name }}_{{ version }}.tar.gz
+  url: https://github.com/trelau/SMESH/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: {{ sha256 }}
+  patches:
+    - geom.patch
 
 build:
   number: 0
