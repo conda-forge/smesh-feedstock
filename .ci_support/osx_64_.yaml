@@ -17,7 +17,7 @@ cxx_compiler_version:
 macos_machine:
 - x86_64-apple-darwin13.4.0
 occt:
-- '7.5'
+- '7.6'
 pin_run_as_build:
   boost-cpp:
     max_pin: x.x.x
@@ -29,8 +29,10 @@ pin_run_as_build:
     max_pin: x.x
 target_platform:
 - osx-64
+tbb:
+- '2021'
 tbb_devel:
-- '2020'
+- '2021'
 vtk:
 - 9.1.0
 zip_keys:

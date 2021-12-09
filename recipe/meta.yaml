@@ -33,6 +33,7 @@ requirements:
     - vtk
     - boost-cpp
     - occt
+    - tbb
     - tbb-devel
     - zlib
     - pthreads-win32  # [win]
