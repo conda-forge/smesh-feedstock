@@ -29,6 +29,7 @@ requirements:
     - git
     - python-patch
     - python =3.9
+    - make                           # [unix]
   host:
     - vtk
     - boost-cpp
@@ -62,6 +63,7 @@ test:
     - cmake
     - ninja
     - catch2
+    - make                            # [unix]
 
 about:
   home: https://github.com/LaughlinResearch/SMESH
