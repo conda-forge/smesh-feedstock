@@ -33,7 +33,6 @@ requirements:
     - vtk
     - boost-cpp
     - occt
-    - tbb-devel
     - zlib
     - pthreads-win32  # [win]
     # - libmed
