@@ -1,6 +1,7 @@
-git clone --recurse-submodules https://github.com/trelau/SMESH.git
+git clone https://github.com/looooo/SMESH.git
 cd SMESH
-git checkout v9.8.0.2
+git checkout int_32_test
+git submodule update --init --recursive
 python prepare.py
 
 mkdir build
