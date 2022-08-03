@@ -1,4 +1,4 @@
-git clone https://github.com/trelau/SMESH.git
+git clone https://github.com/looooo/SMESH.git
 cd SMESH
 git checkout int_32_test
 git submodule update --init --recursive
