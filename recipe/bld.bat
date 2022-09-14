@@ -1,6 +1,6 @@
 git clone https://github.com/looooo/SMESH.git
 cd SMESH
-git checkout int_32_test
+git checkout patch-4
 git submodule update --init --recursive
 python prepare.py
 
