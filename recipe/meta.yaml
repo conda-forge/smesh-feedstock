@@ -15,7 +15,7 @@ package:
     #     - linker.patch  # [win]
 
 build:
-  number: 4
+  number: 5
 
 requirements:
   build:
@@ -40,6 +40,7 @@ requirements:
     - vtk
     - boost-cpp
     - occt
+    - {{ pin_compatible('occt', max_pin='x.x.x') }}
     - zlib
     - pthreads-win32  # [win]
     # - libmed
