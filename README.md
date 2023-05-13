@@ -1,11 +1,11 @@
-About smesh
-===========
+About smesh-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/smesh-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/LaughlinResearch/SMESH
 
 Package license: LGPL-2.1-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/smesh-feedstock/blob/main/LICENSE.txt)
 
 Summary: A complete MESH framework based on the OCCT library.
 
