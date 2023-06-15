@@ -1,4 +1,4 @@
-git clone https://github.com/looooo/SMESH.git
+git clone https://github.com/realthunder/SMESH.git
 cd SMESH
 git checkout patch-4
 git submodule update --init --recursive
