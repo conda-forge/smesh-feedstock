@@ -32,14 +32,13 @@ requirements:
   host:
     - vtk
     - boost-cpp
-    - occt
+    - occt =7.6.3
     - zlib
     - pthreads-win32  # [win]
     # - libmed
   run:
     - vtk
     - boost-cpp
-    - occt
     - {{ pin_compatible('occt', max_pin='x.x.x') }}
     - zlib
     - pthreads-win32  # [win]
