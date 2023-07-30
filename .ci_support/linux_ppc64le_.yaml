@@ -17,7 +17,7 @@ cxx_compiler_version:
 docker_image:
 - quay.io/condaforge/linux-anvil-ppc64le
 occt:
-- '7.7'
+- 7.7.2
 pin_run_as_build:
   boost-cpp:
     max_pin: x.x.x
