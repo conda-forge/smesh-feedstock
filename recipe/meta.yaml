@@ -38,7 +38,6 @@ requirements:
     # - libmed
   run:
     - vtk
-    - occt
     - {{ pin_compatible('occt', max_pin='x.x.x') }}
     - zlib
     - pthreads-win32  # [win]
@@ -62,6 +61,7 @@ test:
     - cmake
     - ninja
     - catch2 < 3.0
+    - libboost-devel
 
 about:
   home: https://github.com/LaughlinResearch/SMESH
