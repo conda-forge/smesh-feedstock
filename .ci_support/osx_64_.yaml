@@ -18,11 +18,6 @@ libboost_devel:
 - '1.82'
 macos_machine:
 - x86_64-apple-darwin13.4.0
-occt:
-- 7.7.2
-pin_run_as_build:
-  occt:
-    max_pin: x.x
 target_platform:
 - osx-64
 vtk:

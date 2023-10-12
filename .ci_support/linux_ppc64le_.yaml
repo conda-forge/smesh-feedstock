@@ -16,11 +16,6 @@ docker_image:
 - quay.io/condaforge/linux-anvil-ppc64le
 libboost_devel:
 - '1.82'
-occt:
-- 7.7.2
-pin_run_as_build:
-  occt:
-    max_pin: x.x
 target_platform:
 - linux-ppc64le
 vtk:
