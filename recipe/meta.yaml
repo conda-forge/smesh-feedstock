@@ -15,12 +15,13 @@ package:
     #     - linker.patch  # [win]
 
 build:
-  number: 8
+  number: 9
 
 requirements:
   build:
     - {{ compiler('cxx') }}
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ cdt('mesa-libgl-devel') }}  # [linux]
     - {{ cdt('libxi-devel') }}       # [linux]
     - {{ cdt('libxext-devel') }}     # [linux]
@@ -42,7 +43,6 @@ requirements:
     - zlib
     - pthreads-win32  # [win]
     # - libmed
-    - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.9") }}  # [osx and x86_64]
 
 test:
   source_files:
