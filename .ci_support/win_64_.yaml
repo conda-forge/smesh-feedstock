@@ -3,9 +3,9 @@ c_compiler:
 c_stdlib:
 - vs
 channel_sources:
-- conda-forge
+- freecad/label/qt6, conda-forge
 channel_targets:
-- conda-forge main
+- freecad qt6
 cxx_compiler:
 - vs2022
 libboost_devel:
@@ -18,6 +18,6 @@ pin_run_as_build:
 target_platform:
 - win-64
 vtk:
-- 9.2.6
+- 9.3.0
 zlib:
-- '1.2'
+- '1'

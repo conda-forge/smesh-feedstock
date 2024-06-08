@@ -13,9 +13,9 @@ cdt_arch:
 cdt_name:
 - cos7
 channel_sources:
-- conda-forge
+- freecad/label/qt6, conda-forge
 channel_targets:
-- conda-forge main
+- freecad qt6
 cxx_compiler:
 - gxx
 cxx_compiler_version:
@@ -32,11 +32,11 @@ pin_run_as_build:
 target_platform:
 - linux-aarch64
 vtk:
-- 9.2.6
+- 9.3.0
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
 - - c_stdlib_version
   - cdt_name
 zlib:
-- '1.2'
+- '1'
