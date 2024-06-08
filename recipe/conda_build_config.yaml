@@ -1,4 +1,10 @@
+channel_sources:
+  - freecad/label/qt6, conda-forge
+channel_targets:
+  - freecad qt6
 c_compiler:                # [win]
   - vs2022                 # [win]
 cxx_compiler:              # [win]
   - vs2022                 # [win]
+vtk:
+  - 9.3.0
