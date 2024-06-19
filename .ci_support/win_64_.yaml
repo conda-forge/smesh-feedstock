@@ -20,4 +20,4 @@ target_platform:
 vtk:
 - 9.2.6
 zlib:
-- '1.2'
+- '1'
