@@ -31,7 +31,7 @@ requirements:
     - cmake
     - git
     - python-patch
-    - python =3.9
+    - python
   host:
     - vtk
     - libboost-devel
