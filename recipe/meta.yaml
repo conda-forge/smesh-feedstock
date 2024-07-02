@@ -1,5 +1,5 @@
 {% set name = "smesh" %}
-{% set version = "9.9.0.0" %}
+{% set version = "9.13.0.b1" %}
 {% set sha256 = "bd5bddd509e5120bdd56178c37471984062e8abd36465389d64fb6e1b811a1d4" %}
 
 package:
@@ -15,7 +15,7 @@ package:
     #     - linker.patch  # [win]
 
 build:
-  number: 11
+  number: 0
   run_exports:
     - {{ pin_subpackage('smesh', max_pin='x.x.x') }}
 

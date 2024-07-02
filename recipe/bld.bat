@@ -1,6 +1,6 @@
-git clone https://github.com/realthunder/SMESH.git
+git clone https://github.com/looooo/SMESH.git
 cd SMESH
-git checkout patch-4
+git checkout V9_13_0b1
 git submodule update --init --recursive
 python prepare.py
 
