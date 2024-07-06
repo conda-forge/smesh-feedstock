@@ -1,7 +1,12 @@
+echo ### cloning main repo
 git clone https://github.com/looooo/SMESH.git
 cd SMESH
 git checkout V9_13_0b1
+
+echo ### cloning subrepos
 git submodule update --init --recursive
+
+echo ### applying patches
 python prepare.py
 
 mkdir build
