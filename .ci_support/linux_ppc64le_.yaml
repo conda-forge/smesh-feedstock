@@ -34,5 +34,3 @@ zip_keys:
   - cxx_compiler_version
 - - c_stdlib_version
   - cdt_name
-zlib:
-- '1'
