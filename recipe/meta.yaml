@@ -34,15 +34,12 @@ requirements:
     - python
   host:
     - vtk
-    - libboost-devel
     - occt
-    - zlib
+    - libboost-devel
+    - libzlib
     - pthreads-win32  # [win]
     # - libmed
   run:
-    - vtk
-    - {{ pin_compatible('occt', max_pin='x.x.x') }}
-    - zlib
     - pthreads-win32  # [win]
     # - libmed
 
