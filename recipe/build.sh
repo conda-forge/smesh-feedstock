@@ -13,7 +13,7 @@ cmake -G "Ninja" \
       -D CMAKE_PREFIX_PATH:FILEPATH=$PREFIX \
       -D Boost_NO_BOOST_CMAKE:BOOL=ON \
       -D ENABLE_MED:BOOL=OFF \
-      -D ENABLE_NETGEN:BOOL=OFF \
+      -D ENABLE_NETGEN:BOOL=ON \
       ..
 
 ninja install
