@@ -1,6 +1,8 @@
 {% set name = "smesh" %}
 {% set version = "9.9.0.0" %}
 {% set sha256 = "bd5bddd509e5120bdd56178c37471984062e8abd36465389d64fb6e1b811a1d4" %}
+{% set build_number = 12 %}
+{% set build_number = build_number + 500 %}  # [FEATURE_DEBUG]
 
 package:
     name: {{ name }}
@@ -15,7 +17,7 @@ package:
     #     - linker.patch  # [win]
 
 build:
-  number: 12
+  number: {{ build_number }}
   run_exports:
     - {{ pin_subpackage('smesh', max_pin='x.x.x') }}
 
@@ -33,7 +35,7 @@ requirements:
     - python-patch
     - python
   host:
-    - vtk
+    - vtk-base
     - occt
     - libboost-devel
     - libzlib

@@ -4,11 +4,16 @@ git checkout occt7.8.1
 git submodule update --init --recursive
 python prepare.py
 
+if "%FEATURE_DEBUG%"=="1" (
+      set BUILD_TYPE="Debug"
+      echo "#! building debug package !#") else (
+      set BUILD_TYPE="Release")
+
 mkdir build
 cd build
 
 cmake -G "Ninja" ^
-    -D CMAKE_BUILD_TYPE=Release ^
+    -D CMAKE_BUILD_TYPE=%BUILD_TYPE%  ^
     -D CMAKE_INSTALL_PREFIX:FILEPATH="%LIBRARY_PREFIX%" ^
     -D CMAKE_PREFIX_PATH:FILEPATH="%LIBRARY_PREFIX%" ^
     -D CMAKE_SYSTEM_PREFIX_PATH:FILEPATH="%LIBRARY_PREFIX%" ^
