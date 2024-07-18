@@ -61,7 +61,7 @@ about:
   home: https://github.com/LaughlinResearch/SMESH
   license: LGPL-2.1-or-later
   license_family: LGPL
-  license_file:  SMESH/LICENSE.txt
+  license_file:  LICENSE.txt
   summary: A complete MESH framework based on the OCCT library.
   description: Standalone version of the meshing library from the Salome Platform.
 
