@@ -27,9 +27,6 @@ requirements:
     - {{ cdt('libxext-devel') }}     # [linux]
     - ninja
     - cmake
-    - git
-    - python-patch
-    - python
   host:
     - vtk
     - occt
