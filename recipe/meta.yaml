@@ -1,6 +1,5 @@
 {% set name = "smesh" %}
 {% set version = "9.9.0.0" %}
-{% set sha256 = "bd5bddd509e5120bdd56178c37471984062e8abd36465389d64fb6e1b811a1d4" %}
 {% set build_number = 12 %}
 {% set build_number = build_number + 500 %}  # [FEATURE_DEBUG]
 
@@ -8,13 +7,10 @@ package:
     name: {{ name }}
     version: {{ version }}
 
-# source:
-    # fn: {{ name }}_{{ version }}.tar.gz
-    # url: https://github.com/LaughlinResearch/SMESH/archive/v{{ version }}.tar.gz
-    # sha256: {{ sha256 }}
-    # patches:
-    #     - osx-vtk.patch  # [osx]
-    #     - linker.patch  # [win]
+source:
+    fn: {{ name }}_{{ version }}.tar.gz
+    url: https://github.com/looooo/SMESH/releases/download/occt7.8.1/SMESH_occt7.8.1.tar.gz
+    sha256: bb3fd14f96625abdd2d3c6ad8b7d9fc53bf52b70abb3c9d74af5eb8df5ebfda2
 
 build:
   number: {{ build_number }}

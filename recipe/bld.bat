@@ -1,9 +1,3 @@
-git clone https://github.com/looooo/SMESH.git
-cd SMESH
-git checkout occt7.8.1
-git submodule update --init --recursive
-python prepare.py
-
 if "%FEATURE_DEBUG%"=="1" (
       set BUILD_TYPE="Debug"
       echo "#! building debug package !#") else (
