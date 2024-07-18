@@ -10,7 +10,7 @@ package:
 source:
     fn: {{ name }}_{{ version }}.tar.gz
     url: https://github.com/looooo/SMESH/releases/download/occt7.8.1/SMESH_occt7.8.1.tar.gz
-    sha256: bb3fd14f96625abdd2d3c6ad8b7d9fc53bf52b70abb3c9d74af5eb8df5ebfda2
+    sha256: 3a9739590298716deaa4fc34e6952ba380233798545601aa822b8770ca70f79b
 
 build:
   number: {{ build_number }}
