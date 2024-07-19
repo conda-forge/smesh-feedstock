@@ -10,7 +10,7 @@ if errorlevel 1 exit 1
 ninja -C test/build install
 if errorlevel 1 exit 1
 
-./test/tests/test_Catch.exe
-./test/tests/test_StdMeshers.exe
-./test/tests/test_NETGENPlugin.exe
-./test/tests/test_MEFISTO2.exe
+test/tests/test_Catch.exe
+test/tests/test_StdMeshers.exe
+test/tests/test_NETGENPlugin.exe
+test/tests/test_MEFISTO2.exe
