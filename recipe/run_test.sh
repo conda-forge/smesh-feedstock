@@ -1,7 +1,3 @@
-cd SMESH/test
-mkdir build
-cd build
-
 if [[ $target_platform == linux-aarch64 ]]; then
     echo "tests are not yet working"
     exit 0
