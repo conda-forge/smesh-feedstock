@@ -6,4 +6,4 @@ cmake -G "Ninja" \
       -D Boost_NO_BOOST_CMAKE:BOOL=ON \
       -D ENABLE_NETGEN:BOOL=ON
 
-ninja install
+ninja -C build install

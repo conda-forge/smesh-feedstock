@@ -11,5 +11,5 @@ cmake -G "Ninja" ^
       -D ENABLE_LIB_NAMING:BOOL=OFF
 
 if errorlevel 1 exit 1
-ninja install
+ninja -C build install
 if errorlevel 1 exit 1

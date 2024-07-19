@@ -7,7 +7,7 @@ cmake -G "Ninja" ^
       -D PTHREAD_LIB_DIRS:FILEPATH="%LIBRARY_PREFIX%/lib" ^
 
 if errorlevel 1 exit 1
-ninja install
+ninja -C test/build install
 if errorlevel 1 exit 1
 
 ./test/tests/test_Catch.exe

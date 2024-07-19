@@ -20,7 +20,7 @@ cmake -G "Ninja" \
       -D CMAKE_INSTALL_PREFIX:FILEPATH=$PREFIX \
       -D CMAKE_PREFIX_PATH:FILEPATH=$PREFIX
 
-ninja install
+ninja -C test/build install
 
 ./test/tests/test_Catch
 ./test/tests/test_StdMeshers
