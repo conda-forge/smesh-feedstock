@@ -18,19 +18,16 @@ if [[ ${HOST} =~ .*linux.* ]]; then
 fi
 
 cmake -G "Ninja" \
+      -B test/build \
+      -S test/. \
       -D CMAKE_BUILD_TYPE:STRING="Release" \
       ${CMAKE_PLATFORM_FLAGS[@]} \
       -D CMAKE_INSTALL_PREFIX:FILEPATH=$PREFIX \
-      -D CMAKE_PREFIX_PATH:FILEPATH=$PREFIX \
-      ..
+      -D CMAKE_PREFIX_PATH:FILEPATH=$PREFIX
 
 ninja install
 
-cd ..
-cd tests
-
-
-./test_Catch
-./test_StdMeshers
-./test_NETGENPlugin
-./test_MEFISTO2
+./test/tests/test_Catch
+./test/tests/test_StdMeshers
+./test/tests/test_NETGENPlugin
+./test/tests/test_MEFISTO2
