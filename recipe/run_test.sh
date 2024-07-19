@@ -14,8 +14,7 @@ if [[ ${HOST} =~ .*linux.* ]]; then
 fi
 
 cmake -G "Ninja" \
-      -B test/build \
-      -S test/. \
+      -B test/build -S test/. \
       -D CMAKE_BUILD_TYPE:STRING="Release" \
       ${CMAKE_PLATFORM_FLAGS[@]} \
       -D CMAKE_INSTALL_PREFIX:FILEPATH=$PREFIX \
