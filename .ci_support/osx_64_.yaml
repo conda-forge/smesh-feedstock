@@ -19,14 +19,11 @@ cxx_compiler:
 cxx_compiler_version:
 - '16'
 libboost_devel:
-- '1.84'
+- '1.86'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 occt:
 - 7.8.1
-pin_run_as_build:
-  occt:
-    max_pin: x.x
 target_platform:
 - osx-64
 vtk:
