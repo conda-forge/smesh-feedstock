@@ -15,4 +15,6 @@ occt:
 target_platform:
 - win-64
 vtk:
-- 9.3.0
+- 9.3.1
+zlib:
+- '1'
