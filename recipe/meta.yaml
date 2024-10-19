@@ -31,7 +31,7 @@ requirements:
     - vtk
     - occt
     - libboost-devel
-    - libzlib
+    - zlib
     - pthreads-win32  # [win]
     # - libmed
   run:
