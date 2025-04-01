@@ -16,6 +16,7 @@ fi
 cmake -G "Ninja" \
       -B test/build -S test/. \
       -D CMAKE_BUILD_TYPE:STRING="Release" \
+      -D CMAKE_POLICY_VERSION_MINIMUM=3.5 \
       ${CMAKE_PLATFORM_FLAGS[@]} \
       -D CMAKE_INSTALL_PREFIX:FILEPATH=$PREFIX \
       -D CMAKE_PREFIX_PATH:FILEPATH=$PREFIX
