@@ -11,6 +11,8 @@ source:
     fn: {{ name }}_{{ version }}.tar.gz
     url: https://github.com/looooo/SMESH/releases/download/occt7.8.1/SMESH_occt7.8.1.tar.gz
     sha256: 876390cf80a3918199949a574b5e091dd705e3e425d2323903989639450bb07a
+    patches:
+        - patches/pthread.diff  # [win]
 
 build:
   number: {{ build_number }}
@@ -32,11 +34,8 @@ requirements:
     - occt
     - libboost-devel
     - zlib
-    - pthreads-win32  # [win]
-    # - libmed
-  run:
-    - pthreads-win32  # [win]
-    # - libmed
+    - winpthreads-devel  # [win]
+    - tbb-devel  # [win]
 
 test:
   source_files:
@@ -56,6 +55,8 @@ test:
     - ninja
     - catch2 < 3.0
     - libboost-devel
+    - winpthreads-devel  # [win]
+    - tbb-devel  # [win]
 
 about:
   home: https://github.com/LaughlinResearch/SMESH

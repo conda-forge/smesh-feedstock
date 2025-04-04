@@ -1,0 +1,11 @@
+--- a/src/Kernel/CMakeLists.txt
++++ b/src/Kernel/CMakeLists.txt
+@@ -18,7 +18,7 @@ add_library(Kernel ${Kernel_SRCS})
+ if(UNIX)
+     target_link_libraries(Kernel Threads::Threads)
+ else()
+-    target_link_libraries(Kernel pthreads)
++    target_link_libraries(Kernel pthread)
+ endif()
+ 
+ target_include_directories(Kernel PUBLIC
