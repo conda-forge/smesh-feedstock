@@ -2,3 +2,7 @@ c_compiler:                # [win]
   - vs2022                 # [win]
 cxx_compiler:              # [win]
   - vs2022                 # [win]
+occt:
+  - 7.9.0
+tbb_devel:                 # [win]
+  - 2022                   # [win]

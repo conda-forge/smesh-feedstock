@@ -1,6 +1,6 @@
 {% set name = "smesh" %}
 {% set version = "9.9.0.0" %}
-{% set build_number = 14 %}
+{% set build_number = 15 %}
 {% set build_number = build_number + 500 %}  # [FEATURE_DEBUG]
 
 package:
@@ -13,6 +13,7 @@ source:
     sha256: 876390cf80a3918199949a574b5e091dd705e3e425d2323903989639450bb07a
     patches:
         - patches/pthread.diff  # [win]
+        - patches/occt-7.9.0.diff
 
 build:
   number: {{ build_number }}
@@ -53,7 +54,7 @@ test:
     - {{ cdt('libxxf86vm') }}         # [linux]
     - cmake
     - ninja
-    - catch2 < 3.0
+    - catch2 <3.0
     - libboost-devel
     - winpthreads-devel  # [win]
     - tbb-devel  # [win]
