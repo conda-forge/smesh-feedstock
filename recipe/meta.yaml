@@ -36,7 +36,7 @@ requirements:
     - libboost-devel
     - zlib
     - winpthreads-devel  # [win]
-    - tbb-devel  # [win]
+    - tbb-devel
 
 test:
   source_files:
@@ -57,7 +57,7 @@ test:
     - catch2 <3.0
     - libboost-devel
     - winpthreads-devel  # [win]
-    - tbb-devel  # [win]
+    - tbb-devel
 
 about:
   home: https://github.com/LaughlinResearch/SMESH
