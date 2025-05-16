@@ -26,6 +26,8 @@ occt:
 - 7.9.0
 target_platform:
 - osx-arm64
+tbb_devel:
+- '2021'
 vtk:
 - 9.4.1
 zip_keys:
