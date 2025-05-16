@@ -24,8 +24,10 @@ occt:
 - 7.9.0
 target_platform:
 - linux-64
+tbb_devel:
+- '2021'
 vtk:
-- 9.3.1
+- 9.4.1
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
