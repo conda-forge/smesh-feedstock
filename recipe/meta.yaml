@@ -9,11 +9,8 @@ package:
 
 source:
     fn: {{ name }}_{{ version }}.tar.gz
-    url: https://github.com/looooo/SMESH/releases/download/occt7.8.1/SMESH_occt7.8.1.tar.gz
-    sha256: 876390cf80a3918199949a574b5e091dd705e3e425d2323903989639450bb07a
-    patches:
-        - patches/pthread.diff  # [win]
-        - patches/occt-7.9.0.diff
+    url: https://github.com/looooo/SMESH/releases/download/vtk9.4_occt7.9/SMESH_vtk9.4_occt7.9.tar.gz
+    sha256: f0c92dc84d011b6457ffb3b18e3cd9fdc39f272325464c063965c4ebf8a11e9a
 
 build:
   number: {{ build_number }}
