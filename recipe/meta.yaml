@@ -10,7 +10,7 @@ package:
 source:
     fn: {{ name }}_{{ version }}.tar.gz
     url: https://github.com/looooo/SMESH/releases/download/vtk9.4_occt7.9/SMESH_vtk9.4_occt7.9.tar.gz
-    sha256: f0c92dc84d011b6457ffb3b18e3cd9fdc39f272325464c063965c4ebf8a11e9a
+    sha256: 7ac021ca5fc4b94f719728f1f9d785ff77bf6b02dace94b4273e4cb0d6bd11a9
 
 build:
   number: {{ build_number }}
