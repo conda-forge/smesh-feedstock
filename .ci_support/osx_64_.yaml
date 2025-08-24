@@ -23,7 +23,7 @@ libboost_devel:
 macos_machine:
 - x86_64-apple-darwin13.4.0
 occt:
-- 7.9.0
+- 7.9.1
 target_platform:
 - osx-64
 vtk:
