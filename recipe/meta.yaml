@@ -22,12 +22,14 @@ requirements:
     - {{ compiler('cxx') }}
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
-    - {{ cdt('mesa-libgl-devel') }}  # [linux]
-    - {{ cdt('libxi-devel') }}       # [linux]
-    - {{ cdt('libxext-devel') }}     # [linux]
     - ninja
     - cmake
   host:
+    - libgl-devel                    # [linux]
+    - libegl-devel                   # [linux]
+    - libgles-devel                  # [linux]
+    - libglx-devel                   # [linux]
+    - libopengl-devel                # [linux]
     - vtk
     - occt
     - libboost-devel
@@ -41,14 +43,6 @@ test:
   requires:
     - {{ compiler('cxx') }}
     - {{ compiler('c') }}
-    - {{ cdt('mesa-libgl-devel') }}   # [linux]
-    - {{ cdt('libxi-devel') }}        # [linux]
-    - {{ cdt('mesa-libegl-devel') }}  # [linux]
-    - {{ cdt('mesa-dri-drivers') }}   # [linux]
-    - {{ cdt('libselinux') }}         # [linux]
-    - {{ cdt('libxdamage') }}         # [linux]
-    - {{ cdt('libxfixes') }}          # [linux]
-    - {{ cdt('libxxf86vm') }}         # [linux]
     - cmake
     - ninja
     - catch2 <3.0
