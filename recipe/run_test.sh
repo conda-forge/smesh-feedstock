@@ -9,8 +9,10 @@ if [[ $target_platform == linux-ppc64le ]]; then
 fi
 
 declare -a CMAKE_PLATFORM_FLAGS
-if [[ ${HOST} =~ .*linux.* ]]; then
-    CMAKE_PLATFORM_FLAGS+=(-DCMAKE_TOOLCHAIN_FILE="${RECIPE_DIR}/cross-linux.cmake")
+# cross-linux.cmake is copied from recipe/ to test dir (RECIPE_DIR not set in rattler-build)
+TOOLCHAIN_FILE="${RECIPE_DIR:-$(pwd)}/cross-linux.cmake"
+if [[ ${HOST} =~ .*linux.* ]] && [[ -f "$TOOLCHAIN_FILE" ]]; then
+    CMAKE_PLATFORM_FLAGS+=(-DCMAKE_TOOLCHAIN_FILE="$TOOLCHAIN_FILE")
 fi
 
 cmake -G "Ninja" \
