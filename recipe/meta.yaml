@@ -1,16 +1,16 @@
 {% set name = "smesh" %}
 {% set version = "9.9.0.0" %}
-{% set build_number = 19 %}
+{% set build_number = 20 %}
 {% set build_number = build_number + 500 %}  # [FEATURE_DEBUG]
 
 package:
-    name: {{ name }}
-    version: {{ version }}
+  name: {{ name }}
+  version: {{ version }}
 
 source:
-    fn: {{ name }}_{{ version }}.tar.gz
-    url: https://github.com/looooo/SMESH/releases/download/vtk9.4_occt7.9/SMESH_vtk9.4_occt7.9.tar.gz
-    sha256: 7ac021ca5fc4b94f719728f1f9d785ff77bf6b02dace94b4273e4cb0d6bd11a9
+  fn: {{ name }}_{{ version }}.tar.gz
+  url: https://github.com/looooo/SMESH/releases/download/vtk9.4_occt7.9/SMESH_vtk9.4_occt7.9.tar.gz
+  sha256: 7ac021ca5fc4b94f719728f1f9d785ff77bf6b02dace94b4273e4cb0d6bd11a9
 
 build:
   number: {{ build_number }}
@@ -22,9 +22,6 @@ requirements:
     - {{ compiler('cxx') }}
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
-    - {{ cdt('mesa-libgl-devel') }}  # [linux]
-    - {{ cdt('libxi-devel') }}       # [linux]
-    - {{ cdt('libxext-devel') }}     # [linux]
     - ninja
     - cmake
   host:
@@ -34,6 +31,9 @@ requirements:
     - zlib
     - winpthreads-devel  # [win]
     - tbb-devel  # [win]
+    - libgl-devel                    # [linux]
+    - xorg-libxi                     # [linux]
+    - xorg-libxext                   # [linux]
 
 test:
   source_files:
@@ -41,14 +41,9 @@ test:
   requires:
     - {{ compiler('cxx') }}
     - {{ compiler('c') }}
-    - {{ cdt('mesa-libgl-devel') }}   # [linux]
-    - {{ cdt('libxi-devel') }}        # [linux]
-    - {{ cdt('mesa-libegl-devel') }}  # [linux]
-    - {{ cdt('mesa-dri-drivers') }}   # [linux]
-    - {{ cdt('libselinux') }}         # [linux]
-    - {{ cdt('libxdamage') }}         # [linux]
-    - {{ cdt('libxfixes') }}          # [linux]
-    - {{ cdt('libxxf86vm') }}         # [linux]
+    - libgl-devel                     # [linux]
+    - xorg-libxi                      # [linux]
+    - libegl-devel                    # [linux]
     - cmake
     - ninja
     - catch2 <3.0
@@ -60,7 +55,7 @@ about:
   home: https://github.com/LaughlinResearch/SMESH
   license: LGPL-2.1-or-later
   license_family: LGPL
-  license_file:  LICENSE.txt
+  license_file: LICENSE.txt
   summary: A complete MESH framework based on the OCCT library.
   description: Standalone version of the meshing library from the Salome Platform.
 
