@@ -1,6 +1,6 @@
 {% set name = "smesh" %}
 {% set version = "9.9.0.0" %}
-{% set build_number = 19 %}
+{% set build_number = 20 %}
 {% set build_number = build_number + 500 %}  # [FEATURE_DEBUG]
 
 package:
@@ -22,18 +22,21 @@ requirements:
     - {{ compiler('cxx') }}
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
-    - {{ cdt('mesa-libgl-devel') }}  # [linux]
-    - {{ cdt('libxi-devel') }}       # [linux]
-    - {{ cdt('libxext-devel') }}     # [linux]
     - ninja
     - cmake
   host:
+    - libgl-devel                    # [linux]
+    - libegl-devel                   # [linux]
+    - libgles-devel                  # [linux]
+    - libglx-devel                   # [linux]
+    - libopengl-devel                # [linux]
     - vtk
+    - vtk-io-ffmpeg  # [not win]
     - occt
     - libboost-devel
     - zlib
     - winpthreads-devel  # [win]
-    - tbb-devel  # [win]
+    - tbb-devel
 
 test:
   source_files:
@@ -41,20 +44,13 @@ test:
   requires:
     - {{ compiler('cxx') }}
     - {{ compiler('c') }}
-    - {{ cdt('mesa-libgl-devel') }}   # [linux]
-    - {{ cdt('libxi-devel') }}        # [linux]
-    - {{ cdt('mesa-libegl-devel') }}  # [linux]
-    - {{ cdt('mesa-dri-drivers') }}   # [linux]
-    - {{ cdt('libselinux') }}         # [linux]
-    - {{ cdt('libxdamage') }}         # [linux]
-    - {{ cdt('libxfixes') }}          # [linux]
-    - {{ cdt('libxxf86vm') }}         # [linux]
     - cmake
     - ninja
     - catch2 <3.0
+    - zlib
     - libboost-devel
     - winpthreads-devel  # [win]
-    - tbb-devel  # [win]
+    - tbb-devel
 
 about:
   home: https://github.com/LaughlinResearch/SMESH
