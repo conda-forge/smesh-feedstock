@@ -26,12 +26,12 @@ requirements:
     - cmake
   host:
     - vtk
-    - vtk-io-ffmpeg
+    - vtk-io-ffmpeg  # [not win]
     - occt
     - libboost-devel
     - zlib
     - winpthreads-devel  # [win]
-    - tbb-devel  # [win]
+    - tbb-devel
     - libgl-devel                    # [linux]
     - xorg-libxi                     # [linux]
     - xorg-libxext                   # [linux]
@@ -48,9 +48,10 @@ test:
     - cmake
     - ninja
     - catch2 <3.0
+    - zlib
     - libboost-devel
     - winpthreads-devel  # [win]
-    - tbb-devel  # [win]
+    - tbb-devel
 
 about:
   home: https://github.com/LaughlinResearch/SMESH
