@@ -47,6 +47,7 @@ test:
     - cmake
     - ninja
     - catch2 <3.0
+    - zlib
     - libboost-devel
     - winpthreads-devel  # [win]
     - tbb-devel
