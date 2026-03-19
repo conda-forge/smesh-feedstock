@@ -31,7 +31,7 @@ requirements:
     - libglx-devel                   # [linux]
     - libopengl-devel                # [linux]
     - vtk
-    - vtk-io-ffmpeg
+    - vtk-io-ffmpeg  # [not win]
     - occt
     - libboost-devel
     - zlib
