@@ -26,6 +26,7 @@ requirements:
     - cmake
   host:
     - vtk
+    - vtk-io-ffmpeg
     - occt
     - libboost-devel
     - zlib
