@@ -9,8 +9,10 @@ package:
 
 source:
     fn: {{ name }}_{{ version }}.tar.gz
-    url: https://github.com/looooo/SMESH/releases/download/vtk9.4_occt7.9/SMESH_vtk9.4_occt7.9.tar.gz
-    sha256: 7ac021ca5fc4b94f719728f1f9d785ff77bf6b02dace94b4273e4cb0d6bd11a9
+    url: https://github.com/looooo/SMESH/releases/download/vtk9.6.0_occt7.9.3/SMESH_.tar.gz
+    sha256: 95f60b67f4fbb94fddfb6aee1b3d8c17ccc0e56c0678ed4967f47b517ac297cf
+    patches:
+      - patches/0002-test-pthread.patch
 
 build:
   number: {{ build_number }}

@@ -17,6 +17,6 @@ target_platform:
 tbb_devel:
 - '2022'
 vtk:
-- 9.5.1
+- 9.6.0
 zlib:
 - '1'
