@@ -1,0 +1,101 @@
+context:
+  name: smesh
+  version: "9.9.0.0"
+
+package:
+  name: ${{ name }}
+  version: ${{ version }}
+
+source:
+  url: https://github.com/looooo/SMESH/releases/download/vtk9.6.0_occt7.9.3/SMESH_.tar.gz
+  sha256: 95f60b67f4fbb94fddfb6aee1b3d8c17ccc0e56c0678ed4967f47b517ac297cf
+  patches:
+    - patches/0002-test-pthread.patch
+
+build:
+  number: 20
+
+requirements:
+  run_exports:
+    - ${{ pin_subpackage('smesh', upper_bound='x.x.x') }}
+  build:
+    - ${{ compiler('cxx') }}
+    - ${{ compiler('c') }}
+    - ${{ stdlib('c') }}
+    - ninja
+    - cmake
+  host:
+    - if: linux
+      then:
+        - libgl-devel
+        - xorg-libxi
+        - xorg-libxext
+    - vtk
+    - if: unix
+      then:
+        - vtk-io-ffmpeg
+    - occt
+    - libboost-devel
+    - zlib
+    - tbb-devel
+    - if: win
+      then:
+        - winpthreads-devel
+
+tests:
+  - if: unix
+    then:
+      - script: run_test.sh
+        files:
+          source:
+            - test
+          recipe:
+            - cross-linux.cmake
+        requirements:
+          build:
+            - ${{ compiler('cxx') }}
+            - ${{ compiler('c') }}
+            - if: linux
+              then:
+                - libgl-devel
+                - xorg-libxi
+                - libegl-devel
+            - cmake
+            - ninja
+          run:
+            - catch2 <3.0
+            - libboost-devel
+            - tbb-devel
+            - zlib
+  - if: win
+    then:
+      - script: run_test.bat
+        files:
+          source:
+            - test
+        requirements:
+          build:
+            - ${{ compiler('cxx') }}
+            - ${{ compiler('c') }}
+            - cmake
+            - ninja
+          run:
+            - catch2 <3.0
+            - libboost-devel
+            - tbb-devel
+            - zlib
+            - winpthreads-devel
+
+about:
+  homepage: https://github.com/LaughlinResearch/SMESH
+  license: LGPL-2.1-or-later
+  license_file: LICENSE.txt
+  summary: A complete MESH framework based on the OCCT library.
+  description: |
+    Standalone version of the meshing library from the Salome Platform.
+
+extra:
+  recipe-maintainers:
+    - oursland
+    - adrianinsaval
+    - looooo
