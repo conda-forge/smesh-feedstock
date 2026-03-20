@@ -6,6 +6,7 @@ cmake -G "Ninja" ^
       -D CMAKE_SYSTEM_PREFIX_PATH:FILEPATH="%LIBRARY_PREFIX%" ^
       -D PTHREAD_INCLUDE_DIRS:FILEPATH="%LIBRARY_PREFIX%/include" ^
       -D PTHREAD_LIB_DIRS:FILEPATH="%LIBRARY_PREFIX%/lib" ^
+      -D CMAKE_CXX_STANDARD_LIBRARIES="pthread.lib"
 
 if errorlevel 1 exit 1
 ninja -C test/build install
