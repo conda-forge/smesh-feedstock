@@ -1,3 +1,4 @@
+export BUILD_TYPE=${BUILD_TYPE:-Release}
 cmake -G "Ninja" \
       -B build -S . \
       -D CMAKE_BUILD_TYPE:STRING=$BUILD_TYPE \
