@@ -1,0 +1,33 @@
+diff --git a/src/Kernel/CMakeLists.txt b/src/Kernel/CMakeLists.txt
+index 3bae8ba..0796181 100644
+--- a/src/Kernel/CMakeLists.txt
++++ b/src/Kernel/CMakeLists.txt
+@@ -27,10 +27,7 @@ target_include_directories(Kernel PUBLIC
+     $<INSTALL_INTERFACE:include/smesh/Kernel>
+ )
+ 
+-if(MSVC)
+-    target_include_directories(Kernel PUBLIC
+-        $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/extra/pthread>)
+-endif()
++
+ 
+ if(WIN32)
+     set_target_properties(Kernel PROPERTIES COMPILE_FLAGS
+diff --git a/test/CMakeLists.txt b/test/CMakeLists.txt
+index a1d2958..6e7563e 100644
+--- a/test/CMakeLists.txt
++++ b/test/CMakeLists.txt
+@@ -61,12 +61,6 @@ endif()
+ if(UNIX)
+     find_package(Threads REQUIRED)
+ elseif(MSVC)
+-    # MSVC: use our pthread compat header (no external library)
+-    set(PTHREAD_INCLUDE_DIRS "${CMAKE_SOURCE_DIR}/../extra/pthread")
+-    if(NOT EXISTS ${PTHREAD_INCLUDE_DIRS})
+-        message(FATAL_ERROR "pthread compat directory not found: ${PTHREAD_INCLUDE_DIRS}")
+-    endif()
+-    include_directories(${PTHREAD_INCLUDE_DIRS})
+     find_package(Threads REQUIRED)
+ else()
+     set(PTHREAD_INCLUDE_DIRS "" CACHE PATH "pthread include directory.")
