@@ -9,7 +9,8 @@ cmake -G "Ninja" ^
       -D PTHREAD_LIB_DIRS:FILEPATH="%LIBRARY_PREFIX%/lib" ^
       -D ENABLE_NETGEN:BOOL=ON ^
       -D Boost_NO_BOOST_CMAKE:BOOL=ON ^
-      -D ENABLE_LIB_NAMING:BOOL=OFF
+      -D ENABLE_LIB_NAMING:BOOL=OFF ^
+      -D CMAKE_CXX_STANDARD_LIBRARIES="pthread.lib"
 
 if errorlevel 1 exit 1
 ninja -C build install
