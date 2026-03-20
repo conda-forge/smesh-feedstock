@@ -39,7 +39,6 @@ requirements:
 test:
   source_files:
     - test
-    - extra
   requires:
     - {{ compiler('cxx') }}
     - {{ compiler('c') }}
