@@ -13,7 +13,7 @@ source:
     - patches/0002-test-pthread.patch
 
 build:
-  number: 20
+  number: 21
 
 requirements:
   run_exports:
