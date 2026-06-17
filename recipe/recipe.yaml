@@ -14,7 +14,7 @@ source:
     - patches/0003-boost-regex-str-enum.patch
 
 build:
-  number: 24
+  number: 25
 
 requirements:
   run_exports:
