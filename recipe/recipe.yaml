@@ -32,9 +32,7 @@ requirements:
         - xorg-libxi
         - xorg-libxext
     - vtk
-    - if: unix
-      then:
-        - vtk-io-ffmpeg
+    - vtk-io-ffmpeg
     - occt
     - libboost-devel
     - zlib
