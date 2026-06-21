@@ -14,7 +14,7 @@ source:
     - patches/0003-boost-regex-str-enum.patch
 
 build:
-  number: 24
+  number: 25
 
 requirements:
   run_exports:
@@ -32,9 +32,7 @@ requirements:
         - xorg-libxi
         - xorg-libxext
     - vtk
-    - if: unix
-      then:
-        - vtk-io-ffmpeg
+    - vtk-io-ffmpeg
     - occt
     - libboost-devel
     - zlib
