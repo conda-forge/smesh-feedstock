@@ -12,6 +12,8 @@ source:
   patches:
     - patches/0002-test-pthread.patch
     - patches/0003-boost-regex-str-enum.patch
+    - patches/0004-occt-8.0-compat.patch
+    - patches/0005-occt-8.0-netgen-occ.patch
 
 build:
   number: 26
