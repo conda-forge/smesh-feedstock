@@ -16,7 +16,7 @@ source:
     - patches/0005-occt-8.0-netgen-occ.patch
 
 build:
-  number: 26
+  number: 27
 
 requirements:
   run_exports:
