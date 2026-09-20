@@ -16,7 +16,7 @@ source:
     - patches/0005-occt-8.0-netgen-occ.patch
 
 build:
-  number: 28
+  number: 29
 
 requirements:
   run_exports:
@@ -39,6 +39,10 @@ requirements:
     - libboost-devel
     - zlib
     - tbb-devel
+    - if: win
+      then:
+        - winpthreads-devel
+  run:
     - if: win
       then:
         - winpthreads-devel
@@ -86,7 +90,6 @@ tests:
             - libboost-devel
             - tbb-devel
             - zlib
-            - winpthreads-devel
 
 about:
   homepage: https://github.com/LaughlinResearch/SMESH
